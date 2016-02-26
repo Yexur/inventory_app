@@ -1,0 +1,43 @@
+﻿
+<div class="col-sm-12">
+    <div><h4>{{title}}</h4></div>
+    <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-primary">Video Game</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="category in videoGameCategoryData" ng-click="getGamesByCategory(category)">
+                <a href>{{category.categoryType}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-primary">Board Game</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="category in boardGameCategoryData" ng-click="getGamesByCategory(category)">
+                <a href>{{category.categoryType}}</a>
+            </li>
+        </ul>
+    </div>
+    <br/>
+    <br/>
+    <div class="gridStyle" ng-grid="gridOptions">
+    </div>
+    <br />
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-click="saveGame()">New Game</label>
+        <label class="btn btn-warning" ng-click="saveGame(gridOptions.selectedItems)">Edit Game</label>
+        <label class="btn btn-danger" ng-click="deleteGame(gridOptions.selectedItems)">Delete Game</label>
+    </div>
+    <br />
+    <br />
+    <div class="alert alert-danger col-md-5" ng-if="hasFormError">{{formErrors}}</div>
+    <div class="alert alert-info col-md-5" ng-if="saveSuccess">{{formSaveMsg}}</div>
+    <div class="alert alert-warning col-md-5" ng-if="cancelled">{{formCancel}}</div>
+</div>

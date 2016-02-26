@@ -1,0 +1,44 @@
+﻿<div class="modal-header">
+    <h1>Delete Game</h1>
+</div>
+
+<div class="modal-body">
+    <form class="form-horizontal" name="gameDeleteForm" novalidate role="form">
+        <fieldset>
+            <legend>Game Information</legend>
+            <div class="form-group">
+                <label for="itemDescription" class="col-sm-3 control-label">Title</label>
+                <label name="itemDescription" class="col-md-3 control-label">{{gameDelete.itemDescription}}</label>
+            </div>
+
+            <div class="form-group">
+                <label for="categoryType" class="col-md-3 control-label">Category Type</label>
+                <label name="categoryType" class="col-md-3 control-label">{{gameDelete.categoryType}}</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="publisher" class="col-md-3 control-label">Publisher</label>
+                <label name="publisher" class="col-md-3 control-label">{{gameDelete.publisher}}</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="developer" class="col-md-3 control-label">Developer</label>
+                <label name="developer" class="col-md-3 control-label">{{gameDelete.developer}}</label>
+            </div>
+        </fieldset>
+        <br />
+    </form>
+</div>
+
+<div class="modal-footer">
+    <div class="col-sm-offset-3 col-sm-9">
+        <input type="button" class="btn btn-default" value="Cancel"
+               ng-click="cancelForm()" />
+        <input type="submit" class="btn btn-primary" value="Delete"
+               ng-click="deleteGame()" />
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="alert alert-danger" ng-if="hasFormError">{{formErrors}}</div>
+</div>

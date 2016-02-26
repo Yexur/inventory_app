@@ -1,0 +1,16 @@
+﻿<div class="col-sm-12">
+    <h4>{{title}}</h4>
+    <div class="gridStyleVideoGame" ng-grid="gridOptions">
+    </div>
+    <br/>
+    <div class ="btn-group">
+        <label class="btn btn-primary" ng-click="saveCategory()">New Category</label> 
+        <label class="btn btn-warning" ng-click="saveCategory(gridOptions.selectedItems)">Edit Category</label>
+        <label class="btn btn-danger" ng-click="deleteCategory(gridOptions.selectedItems)">Delete Category</label> 
+    </div>
+    <br />
+    <br/>
+    <div class="alert alert-danger col-md-5" ng-if="hasFormError">{{formErrors}}</div>
+    <div class="alert alert-info col-md-5" ng-if="saveSuccess">{{formSaveMsg}}</div>
+    <div class="alert alert-warning col-md-5" ng-if="cancelled">{{formCancel}}</div>
+</div>

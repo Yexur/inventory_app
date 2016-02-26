@@ -1,0 +1,95 @@
+﻿
+
+    <div class="modal-header">
+        <h4>New Game</h4>
+    </div>
+
+    <div class="modal-body">
+        <form class="form-horizontal" name="gameForm" novalidate role="form">
+            <fieldset>
+                <legend>Game Information</legend>
+                <div class="form-group" show-errors>
+                    <label for="itemDescription" class="col-sm-3 control-label">Title</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="itemDescription" id="itemDescription" class="form-control"
+                               ng-model="gameAddEdit.itemDescription" ng-required="true"></input>
+                        <span class="help-block"
+                              ng-if="gameForm.itemDescription.$error.required">A Title is required.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoryType" class="col-sm-3 control-label">Category</label>
+                    <div class="col-sm-9">
+                        <select name="categoryType" id="categoryType" class="form-control"
+                                ng-model="gameAddEdit.categoryOption"
+                                ng-options="categoryOption as categoryOption.label group by categoryOption.group for categoryOption in categoryOptions">
+                        </select>
+                      </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="publisher" class="col-sm-3 control-label">Publisher</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="publisher" id="publisher" class="form-control"
+                               ng-model="gameAddEdit.publisher" ng-required="false"></input>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="developer" class="col-sm-3 control-label">Developer</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="developer" id="developer" class="form-control"
+                               ng-model="gameAddEdit.developer" ng-required="false"></input>
+                    </div>
+                </div>
+
+                <legend>Game Status</legend>
+                <div class="form-group" show-errors>
+                    <label for="price" class="col-sm-3 control-label">Price</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="price" id="price" class="form-control"
+                               ng-model="gameAddEdit.price" ng-required="true" min="0"></input>
+                        <span class="help-block"
+                              ng-if="gameForm.price.$error.required">Requires a valid number, 0 or greater.</span>
+                        <span class="help-block"
+                              ng-if="gameForm.price.$error.min">Must be 0 or greater.</span>
+                    </div>
+                </div>
+
+                <div class="form-group" show-errors>
+                    <label for="rating" class="col-sm-3 control-label">Rating</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="rating" id="rating" class="form-control"
+                               ng-model="gameAddEdit.rating" ng-required="true" min="0"></input>
+                        <span class="help-block"
+                              ng-if="gameForm.rating.$error.required">Requires a valid number, 0 or greater</span>
+                        <span class="help-block"
+                              ng-if="gameForm.rating.$error.min">Must be 0 or greater.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hobbyItemStatus" class="col-sm-3 control-label">Status</label>
+                    <div class="col-sm-9">
+                        <select name="hobbyItemStatus" id="hobbyItemStatus" class="form-control"
+                                ng-model="gameAddEdit.hobbyItemStatus"
+                                ng-options="hobbyItemStatus as hobbyItemStatus.label for hobbyItemStatus in hobbyItemStatuses"></select>
+                    </div>
+                </div>
+            </fieldset>
+            <br />
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <div class="col-sm-offset-3 col-sm-9">
+            <input type="button" class="btn btn-default" value="Cancel"
+                   ng-click="cancelForm()" />
+            <input type="submit" class="btn btn-primary" value="Save"
+                   ng-click="submitForm()" />
+        </div>
+        <br />
+        <br />
+        <div class="alert alert-danger" ng-if="hasFormError">{{formErrors}}</div>
+    </div>

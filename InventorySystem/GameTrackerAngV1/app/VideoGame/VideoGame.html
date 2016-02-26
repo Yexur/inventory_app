@@ -1,0 +1,30 @@
+﻿<div class="col-sm-12">
+    <div><h4>{{title}}</h4></div>
+    <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-primary">Video Game</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="category in videoGameCategoryData" ng-click="getPurchasedVideoGamesByCategory(category)">
+                <a href>{{category.categoryType}}</a>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <div class="gridStyleVideoGame" ng-grid="gridOptions">
+    </div>
+    <br />
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-click="saveVideoGame()">New Video Game</label>
+        <label class="btn btn-warning" ng-click="saveVideoGame(gridOptions.selectedItems)">Edit Video Game</label>
+        <label class="btn btn-danger" ng-click="deleteVideoGame(gridOptions.selectedItems)">Delete Video Game</label>
+    </div>
+    <br />
+    <br />
+    <div class="alert alert-danger col-md-5" ng-if="hasFormError">{{formErrors}}</div>
+    <div class="alert alert-info col-md-5" ng-if="saveSuccess">{{formSaveMsg}}</div>
+    <div class="alert alert-warning col-md-5" ng-if="cancelled">{{formCancel}}</div>
+</div>

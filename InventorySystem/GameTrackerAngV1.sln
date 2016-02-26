@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTrackerAngV1.WebUI", "GameTrackerAngV1\GameTrackerAngV1.WebUI.csproj", "{856A8F30-DDB8-48BE-B157-D61DC108A046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTrackerAngV1.Tests", "GameTrackerAngV1.Tests\GameTrackerAngV1.Tests.csproj", "{32A36A18-566E-4C23-8779-88E12D7CB7FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTrackerAngV1.Persistance", "GameTrackerAngV1.Persistance\GameTrackerAngV1.Persistance.csproj", "{B9A4A5A2-DD7D-457D-9BB2-485E7A80E0E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{856A8F30-DDB8-48BE-B157-D61DC108A046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856A8F30-DDB8-48BE-B157-D61DC108A046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856A8F30-DDB8-48BE-B157-D61DC108A046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856A8F30-DDB8-48BE-B157-D61DC108A046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A36A18-566E-4C23-8779-88E12D7CB7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A36A18-566E-4C23-8779-88E12D7CB7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A36A18-566E-4C23-8779-88E12D7CB7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A36A18-566E-4C23-8779-88E12D7CB7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A4A5A2-DD7D-457D-9BB2-485E7A80E0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A4A5A2-DD7D-457D-9BB2-485E7A80E0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A4A5A2-DD7D-457D-9BB2-485E7A80E0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A4A5A2-DD7D-457D-9BB2-485E7A80E0E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
